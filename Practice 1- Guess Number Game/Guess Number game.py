@@ -3,17 +3,25 @@
 import random
 #consider a variable for storing the best score that doesn't have any value
 bestScore= None
+#Consider a variable for game loop
 playAgain='yes'
 
+#replay loop
 while playAgain=='yes':
-    #ask user to add min/max for the range
+
+#Game Rules(range,range size,difficulty)  
+  
+    #1- Range: ask user to add min/max for the range
     minimum=int(input("What is the lowest number you want to consider for the range?" ))
     maximum=int(input('What is the biggest  number you want to consider for the range? '))
-    #Difficulty level:
+    
+    #2-Range size: 
+    rangeSize=maximum-minimum
+
+    #3-Difficulty level:
     #What gane level do you perefer:
     difficulty= input('Choose the level of difficulty: hard/medium/easy ').lower()
 
-    rangeSize=maximum-minimum
     #fwer attempts, larger range size
     if difficulty=='hard':
     #less attempt
@@ -61,6 +69,7 @@ while playAgain=='yes':
     #consider a variable to store used attempts!
     attemptUsed= 0
 
+#Main Game!
 
     #consider a for loop to repeating the attempt to reach the considered attempt number
     for i in range(attempt):
